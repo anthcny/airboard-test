@@ -1,0 +1,19 @@
+{
+  "name": "airboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:w": "jest --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^23.3.9",
+    "jest": "^23.6.0",
+    "parcel-bundler": "^1.10.3"
+  }
+}

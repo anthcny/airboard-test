@@ -1,0 +1,108 @@
+html, body {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.bg-main {
+    border-color: black;
+    height: 100%;
+}
+#airboard {
+    height: 100%;
+}
+
+.container > main {
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+    .container > main {
+      min-width: 600px;
+      max-width: 80%;
+      width: 1800px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .container > main {
+      width: 100%;
+    }
+}
+
+h1{
+    text-align: center;
+}
+
+.tabs-content > table{
+    padding: 3px;
+    min-width: 100%
+}
+
+tr, th, td{
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+.searchbox{
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+}
+
+.searchbox > .searchbox-line{
+    border: none;
+    border-bottom: 2px solid lightsalmon;
+    outline: none;
+    font-size: 10pt;
+    margin-right: 10px;
+}
+
+.searchbox > .searchbox-line.active{
+    width: 300px;
+}
+
+.tabs {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs > .tabs-header {
+    display: flex;
+    min-height: fit-content;
+}
+.tabs > .tabs-content {
+    flex: 1;
+    overflow: scroll;
+}
+.tabs-header > .tabs-tab {
+    padding: 4px 8px;
+    cursor: pointer;
+    background-color: white;
+}
+.tabs-header > .tabs-tab:hover {
+    border-bottom: 2px solid red;
+    
+}
+.tabs-header > .tabs-tab.active {
+    border-bottom: 2px solid green;
+}
+table tr:nth-child(2n) {
+    background-color: #eee;
+}
+tr:hover{
+    background-color: lightsalmon;
+}
+table tr:nth-child(2n):hover {
+    background-color: lightsalmon;
+}
