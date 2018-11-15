@@ -8,6 +8,10 @@ html, body {
     overflow: hidden;
 }
 
+.footer{
+    height: 10px;
+}
+
 .container {
     display: flex;
     height: 100%;
@@ -50,7 +54,7 @@ h1{
 
 tr, th, td{
     padding: 5px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightsteelblue;
 }
 
 .searchbox{
@@ -65,10 +69,20 @@ tr, th, td{
     outline: none;
     font-size: 10pt;
     margin-right: 10px;
+    width: 120px;
+    transition-property: width;
+    transition-duration: 600ms;
 }
 
-.searchbox > .searchbox-line.active{
+.searchbox > .searchbox-line:focus {
     width: 300px;
+}
+
+.searchbox > .searchbox-button:hover{
+    background-color: rgb(252, 203, 184);
+    transition-property: background-color;
+    transition-duration: 1s;
+    outline: none;
 }
 
 .tabs {
@@ -84,6 +98,8 @@ tr, th, td{
 .tabs > .tabs-content {
     flex: 1;
     overflow: scroll;
+    margin-top: 10px;
+    margin-bottom: 90px;
 }
 .tabs-header > .tabs-tab {
     padding: 4px 8px;
@@ -91,18 +107,27 @@ tr, th, td{
     background-color: white;
 }
 .tabs-header > .tabs-tab:hover {
-    border-bottom: 2px solid red;
-    
+    background-color: #eee;
+    transition-property: background-color;
+    transition-duration: 600ms;
 }
 .tabs-header > .tabs-tab.active {
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid lightsalmon;
 }
 table tr:nth-child(2n) {
     background-color: #eee;
 }
 tr:hover{
     background-color: lightsalmon;
+    transition-property: background-color;
+    transition-duration: 600ms;
 }
 table tr:nth-child(2n):hover {
-    background-color: lightsalmon;
+    background-color: rgb(253, 171, 141);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

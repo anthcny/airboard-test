@@ -13,7 +13,7 @@ export class SearchBox{
         line.classList.add('searchbox-line');
         line.placeholder = lineName;
         const button = document.createElement('button');
-        button.classList.add('searchline-button');
+        button.classList.add('searchbox-button');
         button.innerText = buttonName;
         searchbox.appendChild(line);
         searchbox.appendChild(button);
@@ -24,13 +24,8 @@ export class SearchBox{
         }
     }
 
-    removeActive() {
-        this.element.line.classList.remove('active');
-    }
-
     _renderSearchBox(){
         this.element.line.addEventListener('click', e => {
-            this.element.line.classList.add('active');
             const handlers = this.eventHandlers || {};
             const subscribers = handlers['lineClick'] || [];
             subscribers.forEach(sub => {

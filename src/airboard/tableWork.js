@@ -6,7 +6,7 @@ export function tableData(){
 
 export function createTableHTML(data){
     if(!data) return;
-        
+    if(data.schedule.length == 0) return "<h3>Рейсы не найдены</h3>";
     var html = '<table>';
     var time = !data.schedule[0].departure ? 'arrival' : 'departure';
     data.schedule.forEach(el => {

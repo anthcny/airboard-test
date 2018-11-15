@@ -4,7 +4,9 @@ import {SearchBox} from '../common/components/searchBox';
 import {createTableHTML, saveTableData, tableData, searchInTable} from './tableWork';
 
 
-
+/**
+ * Поскольку API не предоставляет данных о задержанных рейсах, сделал только вывод информации по отправляющимся и прибывающим рейсам.
+ */
 
 export function app(){
     const tabs = new TabsComponent({
@@ -33,7 +35,6 @@ export function app(){
     searchBox.on('clickButton', e => {
         tabs.renderContent('');
         e.line.value = '';
-        searchBox.removeActive()
         tabs.renderContent(createTableHTML(tableData));
     });
     
@@ -53,6 +54,8 @@ export function app(){
         getData({ event: activeTab.data.event }).then(data => {
             tabs.renderContent(createTableHTML(data));
             saveTableData(data);
+        }).catch(err => {
+            tabs.renderContent(err);
         });
 };
 

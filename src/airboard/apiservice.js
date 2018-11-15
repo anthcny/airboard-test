@@ -22,5 +22,10 @@ export function getData({event}){
         .then(function(response){
             return response.json()
         })
-        .catch(alert);
+        .then(data => {
+            if (data.error) {
+                throw new Error(data.error.text);
+            }
+            return data;
+        });
 }
