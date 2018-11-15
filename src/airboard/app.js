@@ -1,7 +1,7 @@
 import {getData} from './apiservice';
 import {TabsComponent} from '../common/components/tabs';
 import {SearchBox} from '../common/components/searchBox';
-import {createTableHTML, saveTableData, tableData, searchInTable} from '../common/components/tableWork';
+import {createTableHTML, saveTableData, tableData, searchInTable} from './tableWork';
 
 
 
