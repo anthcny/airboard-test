@@ -8,10 +8,6 @@ html, body {
     overflow: hidden;
 }
 
-.footer{
-    height: 10px;
-}
-
 .container {
     display: flex;
     height: 100%;
@@ -43,6 +39,7 @@ html, body {
     }
 }
 
+
 h1{
     text-align: center;
 }
@@ -61,21 +58,32 @@ tr, th, td{
     display: flex;
     justify-content: space-between;
     margin-left: auto;
+    max-width: 100%;
+}
+
+.tabs-header > .searchbox{
+    flex-basis: auto;
 }
 
 .searchbox > .searchbox-line{
+    margin-left: 5px;
     border: none;
     border-bottom: 2px solid lightsalmon;
     outline: none;
     font-size: 10pt;
     margin-right: 10px;
     width: 120px;
+    max-width: 100%;
     transition-property: width;
     transition-duration: 600ms;
 }
 
 .searchbox > .searchbox-line:focus {
-    width: 300px;
+    width: 145px;
+}
+
+.searchbox > .searchbox-button{
+    width: max-content;
 }
 
 .searchbox > .searchbox-button:hover{
@@ -94,6 +102,7 @@ tr, th, td{
 .tabs > .tabs-header {
     display: flex;
     min-height: fit-content;
+    max-width: 100%;
 }
 .tabs > .tabs-content {
     flex: 1;
